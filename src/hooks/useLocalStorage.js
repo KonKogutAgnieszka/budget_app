@@ -1,15 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react'
 
-const { useState, useEffect } = require("react");
-
-function useLocalStorage(key, defaultValue){
+export default function useLocalStorage(key, defaultValue){
     const [value, setValue] = useState(()=>{
         const jsonValue = localStorage.getItem(key)
-        if(jsonValue != null) return JSON.parse(jsonValue)
+        if (jsonValue != null) return JSON.parse(jsonValue)
 
-        if(typeof defaultValue === "function"){
+        if (typeof defaultValue === "function"){
             return defaultValue()
-        }else {
+        } else {
             return defaultValue
         }
 
