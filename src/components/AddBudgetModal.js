@@ -27,7 +27,7 @@ return(
                 <Form.Control ref={nameRef} type="text" required />
             </Form.Group>
             <Form.Group className="mb-3" controlId="name">
-                <Form.Label>Name</Form.Label>
+                <Form.Label>Money</Form.Label>
                 <Form.Control
                 ref={maxRef}
                 type="number"
